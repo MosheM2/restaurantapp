@@ -108,7 +108,7 @@ class _CheckOutState extends State<CheckOut> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '${gridContentCheckout.elementAt(index)['subjudul']}',
+                                '${gridContentCheckout.elementAt(index)['subtitle']}',
                                 style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16,
@@ -169,7 +169,7 @@ class _CheckOutState extends State<CheckOut> {
                                     ),
                                     SizedBox(width: 85),
                                     Text(
-                                      '${gridContentCheckout.elementAt(index)['harga']}',
+                                      '${gridContentCheckout.elementAt(index)['price']}',
                                       style: GoogleFonts.poppins(
                                         fontWeight: FontWeight.w600,
                                         fontSize: 16,
@@ -334,7 +334,8 @@ class _CheckOutState extends State<CheckOut> {
 
             // button order
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 30),
+              padding: const EdgeInsets.only(
+                  left: 20, right: 20, top: 10, bottom: 30),
               child: Container(
                 height: 55,
                 width: size.width,

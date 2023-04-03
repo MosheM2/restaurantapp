@@ -46,7 +46,7 @@ class IndexDelapan extends StatelessWidget {
                         ),
                       ),
                     ),
-      
+
                     // cart button
                     Container(
                       alignment: Alignment.center,
@@ -79,7 +79,7 @@ class IndexDelapan extends StatelessWidget {
                 ),
               ),
             ),
-      
+
             // main image content
             SizedBox(
               height: size.height * 0.42,
@@ -100,7 +100,7 @@ class IndexDelapan extends StatelessWidget {
                 ),
               ),
             ),
-      
+
             // sub content
             SizedBox(
               height: size.height * 0.43,
@@ -115,7 +115,7 @@ class IndexDelapan extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(top: 30, left: 20, right: 20),
                       child: Text(
-                        "${gridContentRecommended.elementAt(7)["subjudul"]}",
+                        "${gridContentRecommended.elementAt(7)["subtitle"]}",
                         style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
@@ -125,7 +125,7 @@ class IndexDelapan extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       child: Text(
-                        "${gridContentRecommended.elementAt(7)["harga"]}",
+                        "${gridContentRecommended.elementAt(7)["price"]}",
                         style: GoogleFonts.poppins(
                           color: Colors.deepOrange,
                           fontSize: 26,
@@ -133,7 +133,7 @@ class IndexDelapan extends StatelessWidget {
                         ),
                       ),
                     ),
-      
+
                     // category
                     Padding(
                       padding:
@@ -200,7 +200,7 @@ class IndexDelapan extends StatelessWidget {
                         ],
                       ),
                     ),
-      
+
                     // choose size
                     Padding(
                       padding:
@@ -301,7 +301,7 @@ class IndexDelapan extends StatelessWidget {
                         ),
                       ),
                     ),
-      
+
                     // checkout button
                     Padding(
                       padding: const EdgeInsets.only(top: 30),
@@ -316,9 +316,11 @@ class IndexDelapan extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 25, right: 25),
+                              padding:
+                                  const EdgeInsets.only(left: 25, right: 25),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     '-',
@@ -350,9 +352,11 @@ class IndexDelapan extends StatelessWidget {
                                 color: colorSiji,
                                 borderRadius: BorderRadius.circular(15)),
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 25, right: 25),
+                              padding:
+                                  const EdgeInsets.only(left: 25, right: 25),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'Add to Cart',
@@ -362,7 +366,7 @@ class IndexDelapan extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    '${gridContentRecommended.elementAt(7)['harga']}',
+                                    '${gridContentRecommended.elementAt(7)['price']}',
                                     style: GoogleFonts.poppins(
                                       fontSize: 18,
                                       color: Colors.white,

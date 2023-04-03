@@ -54,7 +54,7 @@ class _MenuScreenState extends State<MenuScreen> {
       Navigator.of(context).push(NavIndexSembilan());
     } else if (index == 9) {
       Navigator.of(context).push(NavIndexSepuluh());
-    } 
+    }
   }
 
   @override
@@ -67,7 +67,7 @@ class _MenuScreenState extends State<MenuScreen> {
         child: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
-          brightness: Brightness.light,
+          /* brightness: Brightness.light, */
         ),
       ),
       body: CustomBody(),
@@ -148,7 +148,10 @@ class _MenuScreenState extends State<MenuScreen> {
                           padding: const EdgeInsets.only(top: 10),
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckOut()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => CheckOut()));
                             },
                             child: Container(
                               alignment: Alignment.center,
@@ -292,8 +295,9 @@ class _MenuScreenState extends State<MenuScreen> {
             ],
           ),
 
+/*
           // Top categories
-          Padding(  
+          Padding(
             padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
             child: Column(
               children: [
@@ -332,6 +336,8 @@ class _MenuScreenState extends State<MenuScreen> {
               ],
             ),
           ),
+
+*/
 
           // content top categories
           Padding(
@@ -493,12 +499,13 @@ class _MenuScreenState extends State<MenuScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Recommended',
+                      'Im Rampenlicht',
                       style: GoogleFonts.poppins(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
+                    /*
                     Container(
                       alignment: Alignment.centerRight,
                       width: 90,
@@ -519,6 +526,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ],
                       ),
                     ),
+                    */
                   ],
                 ),
               ],
@@ -565,7 +573,7 @@ class _MenuScreenState extends State<MenuScreen> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "${gridContentRecommended.elementAt(index)['judul']}",
+                                    "${gridContentRecommended.elementAt(index)['title']}",
                                     style: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 16,
@@ -579,14 +587,14 @@ class _MenuScreenState extends State<MenuScreen> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "${gridContentRecommended.elementAt(index)['harga']}",
+                                    "${gridContentRecommended.elementAt(index)['price']}",
                                     style: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 18,
                                     ),
                                   ),
                                   SizedBox(width: 25),
-                                  Icon(CupertinoIcons.heart, color: Colors.red),
+                                  /* Icon(CupertinoIcons.heart, color: Colors.red), */
                                   Icon(Icons.shopping_cart_checkout),
                                 ],
                               ),
@@ -606,8 +614,7 @@ class _MenuScreenState extends State<MenuScreen> {
   }
 }
 
-
-// Animate Navigate indextiga Hehe 
+// Animate Navigate indextiga Hehe
 Route NavIndexSatu() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => const IndexSatu(),
@@ -626,7 +633,7 @@ Route NavIndexSatu() {
   );
 }
 
-// Animate Navigate indexdua Hehe 
+// Animate Navigate indexdua Hehe
 Route NavIndexDua() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => const IndexDua(),
@@ -645,7 +652,7 @@ Route NavIndexDua() {
   );
 }
 
-// Animate Navigate index 3 Hehe 
+// Animate Navigate index 3 Hehe
 Route NavIndexTiga() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => const IndexTiga(),
@@ -664,7 +671,7 @@ Route NavIndexTiga() {
   );
 }
 
-// Animate Navigate index 4 Hehe 
+// Animate Navigate index 4 Hehe
 Route NavIndexEmpat() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => const IndexEmpat(),
@@ -683,7 +690,7 @@ Route NavIndexEmpat() {
   );
 }
 
-// Animate Navigate index 5 Hehe 
+// Animate Navigate index 5 Hehe
 Route NavIndexLima() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => const IndexLima(),
@@ -702,7 +709,7 @@ Route NavIndexLima() {
   );
 }
 
-// Animate Navigate index 6 Hehe 
+// Animate Navigate index 6 Hehe
 Route NavIndexEnam() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => const IndexEnam(),
@@ -721,7 +728,7 @@ Route NavIndexEnam() {
   );
 }
 
-// Animate Navigate index 7 Hehe 
+// Animate Navigate index 7 Hehe
 Route NavIndexTujuh() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => const IndexTujuh(),
@@ -740,10 +747,11 @@ Route NavIndexTujuh() {
   );
 }
 
-// Animate Navigate index 8 Hehe 
+// Animate Navigate index 8 Hehe
 Route NavIndexDelapan() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => const IndexDelapan(),
+    pageBuilder: (context, animation, secondaryAnimation) =>
+        const IndexDelapan(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 0.5);
       const end = Offset.zero;
@@ -759,10 +767,11 @@ Route NavIndexDelapan() {
   );
 }
 
-// Animate Navigate index 9 Hehe 
+// Animate Navigate index 9 Hehe
 Route NavIndexSembilan() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => const IndexSembilan(),
+    pageBuilder: (context, animation, secondaryAnimation) =>
+        const IndexSembilan(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 0.5);
       const end = Offset.zero;
@@ -778,10 +787,11 @@ Route NavIndexSembilan() {
   );
 }
 
-// Animate Navigate index 9 Hehe 
+// Animate Navigate index 9 Hehe
 Route NavIndexSepuluh() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => const IndexSepuluh(),
+    pageBuilder: (context, animation, secondaryAnimation) =>
+        const IndexSepuluh(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 0.5);
       const end = Offset.zero;

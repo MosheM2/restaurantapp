@@ -31,6 +31,8 @@ git clone https://github.com/choiruladamm/restaurantapp.git
 ```
 flutter create .
 flutter run
+// um CORS error zu umgehen:: flutter run -d chrome --web-browser-flag "--disable-web-security"
+
 ```
 
 ## Don't Forget to
